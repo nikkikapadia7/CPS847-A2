@@ -22,5 +22,5 @@ deploy:
   env: "Webapp-env"
   bucket_name: "elasticbeanstalk-us-east-2-317652771428"
   on:
-    branch: master
+    all_branches: true
   
