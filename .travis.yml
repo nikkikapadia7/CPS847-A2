@@ -21,6 +21,7 @@ deploy:
   app: "webapp"
   env: "Webapp-env"
   bucket_name: "elasticbeanstalk-us-east-2-317652771428"
+  skip_cleanup: true
   on:
     all_branches: true
   
