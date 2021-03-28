@@ -5,7 +5,6 @@ services:
 script:
 - docker pull nginx
 - docker build -t webapp:cps847 .
-- docker run -d -p 8080:80 webapp:cps847
 
 deploy:
   provider: elasticbeanstalk
