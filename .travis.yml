@@ -1,12 +1,14 @@
-deploy:
-  provider: elasticbeanstalk
-  access_key_id:
-    secure: "AKIAUT5MUUJSEZ3Z6RMB"
-  secret_access_key:
-    secure: "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"
-  region: "us-east-2"
-  app: "webapp"
-  env: "Webapp-env"
-  bucket_name: "elasticbeanstalk-us-east-2-317652771428"
-  on:
-    branch: master
+language: python
+python:
+  - "2.7"
+  - "3.4"
+  - "3.5"
+  - "3.6"      # current default Python on Travis CI
+  - "3.7"
+  - "3.8"
+  - "3.9"
+  - "3.9-dev"  # 3.9 development branch
+services:
+  - docker
+after-deploy:
+  - print("done!")
